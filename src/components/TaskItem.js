@@ -1,6 +1,6 @@
 import React from "react";
 
-function TaskItem(tasks, showIncompletedTasks, setTaskStatus, removeTask) {
+function TaskItem({ tasks, showIncompletedTasks, setTaskStatus, removeTask }) {
   return (
     <ul className="tasks-list">
       {tasks

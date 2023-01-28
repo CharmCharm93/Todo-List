@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddItems(handleSubmit, newTask, handleInputNewTask) {
+function AddItems({ handleSubmit, newTask, handleInputNewTask }) {
   return (
     <form onSubmit={handleSubmit} className="form">
       <label htmlFor="new-item">Add new item</label>
