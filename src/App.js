@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import AddItems from "./components/AddItems";
+import AddNewItem from "./components/AddNewItem";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 
@@ -55,7 +55,7 @@ function App() {
         removeTask={removeTask}
         setShowIncompletedTasks={setShowIncompletedTasks}
       />
-      <AddItems
+      <AddNewItem
         handleSubmit={handleSubmit}
         newTask={newTask}
         handleInputNewTask={handleInputNewTask}

@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddItems({ handleSubmit, newTask, handleInputNewTask }) {
+function AddNewItem({ handleSubmit, newTask, handleInputNewTask }) {
   return (
     <form onSubmit={handleSubmit} className="form">
       <label htmlFor="new-item">Add new item</label>
@@ -17,4 +17,4 @@ function AddItems({ handleSubmit, newTask, handleInputNewTask }) {
   );
 }
 
-export default AddItems;
+export default AddNewItem;

@@ -1,4 +1,5 @@
 import React from "react";
+import TaskItem from "./TaskItem";
 
 function TaskList({
   tasks,
@@ -8,13 +9,21 @@ function TaskList({
   setShowIncompletedTasks,
 }) {
   return (
-    <div>
-      <TaskList
-        tasks={tasks}
-        showIncompletedTasks={showIncompletedTasks}
-        setTaskStatus={setTaskStatus}
-        removeTask={removeTask}
-      />
+    <>
+      <ul className="tasks-list">
+        {tasks
+          .filter((task) =>
+            showIncompletedTasks ? task.status === false : true
+          )
+          .map((task) => (
+            <TaskItem
+              key={task.id}
+              task={task}
+              setTaskStatus={setTaskStatus}
+              removeTask={removeTask}
+            />
+          ))}
+      </ul>
       <div className="filter-wrapper">
         <label htmlFor="filter" className="filter-label">
           Show incompleted tasks only
@@ -26,7 +35,7 @@ function TaskList({
           onChange={(e) => setShowIncompletedTasks(e.target.checked)}
         />
       </div>
-    </div>
+    </>
   );
 }
 
